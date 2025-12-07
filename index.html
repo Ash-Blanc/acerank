@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AceRank.AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+              mono: ['Fira Code', 'monospace'],
+            },
+            colors: {
+              primary: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                900: '#0c4a6e',
+              },
+              secondary: {
+                500: '#10b981',
+                600: '#059669',
+              },
+              dark: {
+                800: '#1e293b',
+                900: '#0f172a',
+                950: '#020617',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #000000;
+        color: #e5e5e5;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #333;
+        border-radius: 20px;
+      }
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.5s ease-out forwards;
+      }
+      
+      /* Chat Markdown Styles */
+      .prose p { margin-bottom: 0.75em; line-height: 1.6; }
+      .prose ul { list-style-type: disc; padding-left: 1.5em; margin-bottom: 0.75em; }
+      .prose ol { list-style-type: decimal; padding-left: 1.5em; margin-bottom: 0.75em; }
+      .prose strong { color: inherit; font-weight: 700; }
+      .prose a { color: #3b82f6; text-decoration: none; }
+      .prose a:hover { text-decoration: underline; }
+      .prose code { 
+        background-color: rgba(255,255,255,0.1); 
+        padding: 0.2em 0.4em; 
+        border-radius: 0.3em; 
+        font-family: 'Fira Code', monospace; 
+        font-size: 0.85em; 
+      }
+      .prose pre { 
+        background-color: #111; 
+        padding: 1em; 
+        border-radius: 0.5em; 
+        overflow-x: auto; 
+        margin-bottom: 1em;
+        border: 1px solid #333;
+      }
+      .prose pre code { 
+        background-color: transparent; 
+        padding: 0; 
+        font-size: 0.9em; 
+        color: #e5e5e5; 
+      }
+      .prose blockquote { 
+        border-left: 3px solid #3b82f6; 
+        padding-left: 1em; 
+        font-style: italic; 
+        color: #94a3b8;
+        margin-left: 0;
+      }
+      .katex-display { margin: 1em 0; overflow-x: auto; overflow-y: hidden; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-markdown": "https://esm.sh/react-markdown@9.0.1?bundle",
+    "remark-math": "https://esm.sh/remark-math@6.0.0?bundle",
+    "rehype-katex": "https://esm.sh/rehype-katex@7.0.0?bundle"
+  }
+}
+</script>
+</head>
+  <body class="dark">
+    <div id="root"></div>
+  </body>
+</html>
